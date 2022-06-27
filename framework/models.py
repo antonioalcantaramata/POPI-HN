@@ -4,7 +4,7 @@ from torch import nn
 
 class POPI_hyper(nn.Module):
     
-    def __init__(self, input_target=None, target_hidden_dim=4, target_hidden_size = 50, ray_hidden_dim=150):
+    def __init__(self, input_target=None, target_hidden_dim=4, target_hidden_size = 100, ray_hidden_dim=150):
         super().__init__()
         self.input_dim = input_target
         self.target_hidden_dim = target_hidden_dim
