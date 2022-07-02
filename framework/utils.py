@@ -148,9 +148,10 @@ def circle_points(K, min_angle=None, max_angle=None):
 
 
 
-def pseu_hv(recorrido_alfas, front):
-    suma = sum([front.loc[np.argmin(abs(front['task2_loss'] - alpha))]['task1_loss'] for alpha in recorrido_alfas])
-    hv = recorrido_alfas.max() - recorrido_alfas.min() - suma * (recorrido_alfas.max() - recorrido_alfas.min())/len(recorrido_alfas)
+### HV approximation 
+def pseu_hv(front_alphas, front):
+    suma = sum([front.loc[np.argmin(abs(front['task2_loss'] - alpha))]['task1_loss'] for alpha in front_alphas])
+    hv = front_alphas.max() - front_alphas.min() - suma * (front_alphas.max() - front_alphas.min())/len(front_alphas)
     return hv
 
 
@@ -190,13 +191,13 @@ def evaluate(hypernet, targetnet, loader, rays, device):
     d = {key: results[key] for key in results.keys() & {'task1_loss', 'task2_loss'}}
     df_loss = pd.DataFrame.from_dict(d)
     
-    #ref = [1.01, 1.01]
-    #hyp = pg.hypervolume(df_loss.values)
-    #hyp_val = hyp.compute(ref)
+    ref = [1.00, 1.00]
+    hyp = pg.hypervolume(df_loss.values)
+    hyp_val = hyp.compute(ref)
     
-    recorrido_alfas = np.linspace(start=0, stop=1, num=500)
-    recorrido_alfas = pd.Series(recorrido_alfas)
-    hyp_val = pseu_hv(recorrido_alfas, df_loss)
+    #front_alphas = np.linspace(start=0, stop=1, num=500)
+    #front_alphas = pd.Series(front_alphas)
+    #hyp_val = pseu_hv(front_alphas, df_loss)
     
     results['hypervolume'].append(hyp_val)
     
