@@ -14,7 +14,7 @@ Three .py files can be found in the framework folder: models, solvers, and utils
 If you use this code, you can cite it in you work as:
 
 ```
-@misc{Alcantara_ccl_tool,
+@misc{Alcantara_POPI-HN,
     author = "Alc{\'a}ntara, Antonio",
     title = "POPI-HN",
     year = 2022,
