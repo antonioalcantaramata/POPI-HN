@@ -7,3 +7,17 @@ Pytorch HN structure has been adapted from [avivnavon.github.io/paretohn/](avivn
 ## Usage
 
 Three .py files can be found in the framework folder: models, solvers, and utils. The first one contains the hypernetwork and target network structures, while the other ones are needed for the training process. Furthermore, a python notebook has been added as an using example. 
+
+
+## Citation
+
+If you use this code, you can cite it in you work as:
+
+```
+@misc{Alcantara_ccl_tool,
+    author = "Alc{\'a}ntara, Antonio",
+    title = "POPI-HN",
+    year = 2022,
+    url = "https://github.com/antonioalcantaramata/POPI-HN/"
+  }
+```
