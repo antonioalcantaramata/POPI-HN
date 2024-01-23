@@ -6,18 +6,14 @@ Pytorch HN structure has been adapted from [https://github.com/AvivNavon/pareto-
 
 ## Usage
 
-Three .py files can be found in the framework folder: models, solvers, and utils. The first one contains the hypernetwork and target network structures, while the other ones are needed for the training process. Furthermore, a python notebook has been added as an using example. 
+Three .py files can be found in the framework folder: models, solvers, and utils. The first contains the hypernetwork and target network structures, while the others are needed for the training process. Furthermore, a Python notebook has been added as a using example. 
 
 
-## Citation
+## Citation and Funding
 
-If you use this code, you can cite it in you work as:
+If you use this code, you can cite our paper:
 
-```
-@misc{Alcantara_POPI-HN,
-    author = "Alc{\'a}ntara, Antonio",
-    title = "POPI-HN",
-    year = 2022,
-    url = "https://github.com/antonioalcantaramata/POPI-HN/"
-  }
-```
+Alcantara, A., Galvan, I. M., & Aler, R. (2023). Pareto Optimal Prediction Intervals with Hypernetworks. Applied Soft Computing, 133, 109930. https://doi.org/10.1016/j.asoc.2022.109930
+
+Funded by PID2019-107455RB-C22/AEI/10.13039/501100011033.
+Probabilistic Prediction and Metaheuristic Optimization of Solar/Wind Resources in the Iberian Peninsula (MET4LOWCAR / PROB-META). Agencia Estatal de Investigación.
